@@ -2,13 +2,18 @@
 [LeetCode](https://leetcode.com/) C# submissions with [xUnit.net](https://xunit.net/) unit tests.
 
 ## Highlights
+### Easy
 [Counting Elements](LeetCode/CountingElements/Solution.cs) `HashSet`, `IEnumerable.Count()`
 
-[Problem 1046](LeetCode/P1046/Solution.cs) `Array.Sort()`, `hat operator (^)`
+[Perform String Shifts](LeetCode/PerformStringShifts/Solution.cs) `string.Substring()`, `string.Concat()`
 
-[Problem 136](LeetCode/P136/Solution.cs) `HashSet`
+[Last Stone Weight (#1046)](LeetCode/P1046/Solution.cs) `Array.Sort()`, `hat operator (^)`
 
-[Problem 844](LeetCode/P844/A2/Solution.cs) `LinkedList`
+[Single Number (#136)](LeetCode/P136/Solution.cs) `HashSet`
+
+[Backspace String Compare (#844)](LeetCode/P844/A1/Solution.cs) `Stack`, `IEnumerable.SequenceEqual()`
+
+[Backspace String Compare (#844)](LeetCode/P844/A2/Solution.cs) `LinkedList`
 
 ### Medium
-[Problem 49](LeetCode/P49/Solution.cs) `IEnumerable.OrderBy()`
+[Group Anagrams (#49)](LeetCode/P49/Solution.cs) `IEnumerable.OrderBy()`
