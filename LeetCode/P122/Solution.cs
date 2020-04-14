@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace LeetCode.P122
+﻿namespace LeetCode.P122
 {
     public class Solution
     {
+        // Runtime: 144 ms (24.51 %)
+        // Memory Usage: 25.1 MB
         public int MaxProfit(int[] prices)
         {
             var totalProfit = 0;
@@ -15,6 +12,7 @@ namespace LeetCode.P122
             {
                 if (prices[i] > prices[i - 1])
                 {
+                    // Assume profit when later price is higher
                     totalProfit += prices[i] - prices[i - 1];
                 }
             }

@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Linq;
 
 namespace LeetCode.P844.A1
 {
     public class Solution
     {
+        // Runtime: 72 ms (80.56 %)
+        // Memory Usage: 22.7 MB
         public bool BackspaceCompare(string S, string T)
         {
             var sStack = new Stack<char>();

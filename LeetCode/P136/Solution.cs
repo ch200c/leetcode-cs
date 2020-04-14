@@ -5,6 +5,8 @@ namespace LeetCode.P136
 {
     public class Solution
     {
+        // Runtime: 96 ms (93.40 %)
+        // Memory Usage: 27.3 MB
         public int SingleNumber(int[] nums)
         {
             var duplicates = new HashSet<int>();

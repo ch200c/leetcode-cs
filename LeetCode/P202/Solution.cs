@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace LeetCode.P202
 {
     public class Solution
     {
+        // Runtime: 44 ms (63.24 %)
+        // Memory Usage: 17.6 MB
         public bool IsHappy(int n)
         {
             var history = new HashSet<int>();

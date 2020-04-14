@@ -1,13 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace LeetCode.P543
 {
     public class Solution
     {
         private int maxDiameter;
- 
+
+        // Runtime: 96 ms (76.06 %)
+        // Memory Usage: 25.6 MB
         public int DiameterOfBinaryTree(TreeNode root)
         {
             maxDiameter = 0;

@@ -1,12 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Linq;
 
 namespace LeetCode.P1046
 {
     public class Solution
     {
+        // Runtime: 92 ms (66.92 %)
+        // Memory Usage: 24.3 MB
         public int LastStoneWeight(int[] stones)
         {
             var result = -1;

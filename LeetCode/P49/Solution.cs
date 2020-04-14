@@ -5,6 +5,8 @@ namespace LeetCode.P49
 {
     public class Solution
     {
+        // Runtime: 312 ms (58.43 %)
+        // Memory Usage: 38.8 MB
         public IList<IList<string>> GroupAnagrams(string[] strs)
         {
             var sortedStringToAnagrams = new Dictionary<string, List<string>>();

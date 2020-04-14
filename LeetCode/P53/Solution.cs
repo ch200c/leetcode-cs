@@ -2,6 +2,8 @@
 {
     public class Solution
     {
+        // Runtime: 448 ms (5.84 %)
+        // Memory Usage: 25.5 MB
         public int MaxSubArray(int[] nums)
         {
             var largestSum = int.MinValue;
