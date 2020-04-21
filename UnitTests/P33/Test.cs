@@ -9,7 +9,7 @@ namespace UnitTests.P33
         {
             var solution = new LeetCode.P33.Solution();
             var result = solution.Search(new int[] { 4, 5, 6, 7, 0, 1, 2 }, 0);
-            Assert.Equal(4,result);
+            Assert.Equal(4, result);
         }
 
         [Fact]
@@ -17,7 +17,7 @@ namespace UnitTests.P33
         {
             var solution = new LeetCode.P33.Solution();
             var result = solution.Search(new int[] { 4, 5, 6, 7, 0, 1, 2 }, 3);
-            Assert.Equal( -1,result);
+            Assert.Equal(-1, result);
         }
 
         [Fact]
@@ -32,7 +32,7 @@ namespace UnitTests.P33
         public void Test4()
         {
             var solution = new LeetCode.P33.Solution();
-            var result = solution.Search(new int[] { 1,3 }, 1);
+            var result = solution.Search(new int[] { 1, 3 }, 1);
             Assert.Equal(0, result);
         }
 
