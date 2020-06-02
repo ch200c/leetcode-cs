@@ -1,15 +1,15 @@
 ﻿using Xunit;
 
-namespace UnitTests.LeftmostColumnWithAtLeastAOne
+namespace UnitTests.P1428
 {
     public class Test
     {
         [Fact]
         public void Test1()
         {
-            var solution = new LeetCode.LeftmostColumnWithAtLeastAOne.Solution();
+            var solution = new LeetCode.P1428.Solution();
             var result = solution.LeftMostColumnWithOne(
-                new LeetCode.LeftmostColumnWithAtLeastAOne.BinaryMatrix(
+                new LeetCode.P1428.BinaryMatrix(
                     new int[][] {
                         new int[]{ 0, 0},
                         new int[]{ 1, 1}
@@ -21,9 +21,9 @@ namespace UnitTests.LeftmostColumnWithAtLeastAOne
         [Fact]
         public void Test2()
         {
-            var solution = new LeetCode.LeftmostColumnWithAtLeastAOne.Solution();
+            var solution = new LeetCode.P1428.Solution();
             var result = solution.LeftMostColumnWithOne(
-                new LeetCode.LeftmostColumnWithAtLeastAOne.BinaryMatrix(
+                new LeetCode.P1428.BinaryMatrix(
                     new int[][] {
                         new int[]{ 0, 0},
                         new int[]{ 0, 1}
@@ -36,9 +36,9 @@ namespace UnitTests.LeftmostColumnWithAtLeastAOne
         [Fact]
         public void Test3()
         {
-            var solution = new LeetCode.LeftmostColumnWithAtLeastAOne.Solution();
+            var solution = new LeetCode.P1428.Solution();
             var result = solution.LeftMostColumnWithOne(
-                new LeetCode.LeftmostColumnWithAtLeastAOne.BinaryMatrix(
+                new LeetCode.P1428.BinaryMatrix(
                     new int[][] {
                         new int[]{ 0, 0},
                         new int[]{ 0, 0}
@@ -50,9 +50,9 @@ namespace UnitTests.LeftmostColumnWithAtLeastAOne
         [Fact]
         public void Test4()
         {
-            var solution = new LeetCode.LeftmostColumnWithAtLeastAOne.Solution();
+            var solution = new LeetCode.P1428.Solution();
             var result = solution.LeftMostColumnWithOne(
-                new LeetCode.LeftmostColumnWithAtLeastAOne.BinaryMatrix(
+                new LeetCode.P1428.BinaryMatrix(
                     new int[][] {
                         new int[]{ 0, 0, 0, 1},
                         new int[]{ 0, 0, 1, 1},

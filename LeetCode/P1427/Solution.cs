@@ -1,4 +1,4 @@
-﻿namespace LeetCode.PerformStringShifts
+﻿namespace LeetCode.P1427
 {
     public class Solution
     {
@@ -14,7 +14,7 @@
                 if (_shift[0] == 0)
                 {
                     prefix = s.Substring(0, _shift[1]);
-                    suffix = s.Substring(_shift[1] );
+                    suffix = s.Substring(_shift[1]);
                 }
                 else
                 {

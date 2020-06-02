@@ -10,33 +10,28 @@ namespace LeetCode.P844.A1
         // Memory Usage: 22.7 MB
         public bool BackspaceCompare(string S, string T)
         {
-            var sStack = new Stack<char>();
-            for (var i = 0; i < S.Length; ++i)
-            {
-                if (S[i]=='#')
-                {
-                    sStack.TryPop(out _);
-                }
-                else
-                {
-                    sStack.Push(S[i]);
-                }
-            }
-
-            var tStack = new Stack<char>();
-            for (var i = 0; i < T.Length; ++i)
-            {
-                if (T[i] == '#')
-                {
-                    tStack.TryPop(out _);
-                }
-                else
-                {
-                    tStack.Push(T[i]);
-                }
-            }
-
+            var sStack = RemoveBackspace(S);
+            var tStack = RemoveBackspace(T);
             return sStack.SequenceEqual(tStack);
+        }
+
+        private Stack<char> RemoveBackspace(string input)
+        {
+            var outputStack = new Stack<char>();
+
+            for (var i = 0; i < input.Length; ++i)
+            {
+                if (input[i] == '#')
+                {
+                    outputStack.TryPop(out _);
+                }
+                else
+                {
+                    outputStack.Push(input[i]);
+                }
+            }
+
+            return outputStack;
         }
     }
 }

@@ -3,9 +3,9 @@
 
 ## Highlights
 ### Easy
-[Counting Elements](LeetCode/CountingElements/Solution.cs) `HashSet`, `IEnumerable.Count()`
+[Counting Elements (#1426)](LeetCode/P1426/Solution.cs) `HashSet`, `IEnumerable.Count()`
 
-[Perform String Shifts](LeetCode/PerformStringShifts/Solution.cs) `string.Substring()`, `string.Concat()`
+[Perform String Shifts (#1427)](LeetCode/P1427/Solution.cs) `string.Substring()`, `string.Concat()`
 
 [Last Stone Weight (#1046)](LeetCode/P1046/Solution.cs) `Array.Sort()`, `hat operator (^)`
 

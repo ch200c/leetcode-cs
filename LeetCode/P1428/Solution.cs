@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace LeetCode.LeftmostColumnWithAtLeastAOne
+namespace LeetCode.P1428
 {
     public class Solution
     {

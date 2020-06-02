@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 
-namespace LeetCode.CountingElements
+namespace LeetCode.P1426
 {
     public class Solution
     {

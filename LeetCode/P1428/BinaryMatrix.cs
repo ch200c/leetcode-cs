@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace LeetCode.LeftmostColumnWithAtLeastAOne
+namespace LeetCode.P1428
 {
     public class BinaryMatrix
     {

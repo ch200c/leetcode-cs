@@ -1,19 +1,19 @@
 ﻿using Xunit;
 
-namespace UnitTests.PerformStringShifts
+namespace UnitTests.P1427
 {
     public class Test
     {
         [Fact]
         public void Test1()
         {
-            var solution = new LeetCode.PerformStringShifts.Solution();
+            var solution = new LeetCode.P1427.Solution();
 
             var result = solution.StringShift(
                 "abc",
-                new int[][] { 
-                    new int[] { 0, 1 }, 
-                    new int[] { 1, 2 }, 
+                new int[][] {
+                    new int[] { 0, 1 },
+                    new int[] { 1, 2 },
                 });
             Assert.Equal("cab", result);
         }
@@ -21,7 +21,7 @@ namespace UnitTests.PerformStringShifts
         [Fact]
         public void Test2()
         {
-            var solution = new LeetCode.PerformStringShifts.Solution();
+            var solution = new LeetCode.P1427.Solution();
 
             var result = solution.StringShift(
                 "abcdefg",
