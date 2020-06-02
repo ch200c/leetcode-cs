@@ -19,3 +19,5 @@
 [Group Anagrams (#49)](LeetCode/P49/Solution.cs) `IEnumerable.OrderBy()`
 
 [Decode String (#394)](LeetCode/P394/Solution.cs) `Stack`
+
+[LRU Cache (#146)](LeetCode/P146/LRUCache.cs) `LinkedList`
