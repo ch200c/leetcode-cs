@@ -8,4 +8,8 @@
     <StartupObject />
   </PropertyGroup>
 
+  <PropertyGroup>
+    <NoWarn>CA1822</NoWarn> <!-- Mark members as static -->
+  </PropertyGroup>
+
 </Project>
