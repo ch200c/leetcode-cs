@@ -5,40 +5,19 @@ namespace LeetCode.UnitTests.P217;
 
 public class Test
 {
-    private readonly Solution _sut;
-
-    public Test()
+    [Theory]
+    [InlineData(new int[] { 1, 2, 3, 1 }, true)]
+    [InlineData(new int[] { 1, 2, 3, 4 }, false)]
+    [InlineData(new int[] { 1, 1, 1, 3, 3, 4, 3, 2, 4, 2 }, true)]
+    public void Test1(int[] nums, bool expected)
     {
-        _sut = new Solution();
-    }
+        // Arrange
+        var sut = new Solution();
 
-    [Fact]
-    public void Test1()
-    {
         // Act
-        var result = _sut.ContainsDuplicate(new int[] { 1, 2, 3, 1 });
+        var result = sut.ContainsDuplicate(nums);
 
         // Assert
-        Assert.True(result);
-    }
-
-    [Fact]
-    public void Test2()
-    {
-        // Act
-        var result = _sut.ContainsDuplicate(new int[] { 1, 2, 3, 4 });
-
-        // Assert
-        Assert.False(result);
-    }
-
-    [Fact]
-    public void Test3()
-    {
-        // Act
-        var result = _sut.ContainsDuplicate(new int[] { 1, 1, 1, 3, 3, 4, 3, 2, 4, 2 });
-
-        // Assert
-        Assert.True(result);
+        Assert.Equal(expected, result);
     }
 }

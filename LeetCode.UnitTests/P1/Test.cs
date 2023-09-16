@@ -1,37 +1,24 @@
-﻿using Xunit;
+﻿using LeetCode.P1;
+using Xunit;
 
-namespace LeetCode.UnitTests.P1
+namespace LeetCode.UnitTests.P1;
+
+public class Test
 {
-    public class Test
+    [Theory]
+    [InlineData(new int[] { 2, 7, 11, 15 }, 9, new[] { 0, 1 })]
+    [InlineData(new int[] { 3, 2, 4 }, 6, new[] { 1, 2 })]
+    [InlineData(new int[] { 3, 3 }, 6, new[] { 0, 1 })]
+
+    public void Test1(int[] nums, int target, int[] expected)
     {
-        [Theory]
-        [InlineData(new int[] { 2, 7, 11, 15 }, 9)]
-        public void Test1(int[] nums, int target)
-        {
-            var solution = new LeetCode.P1.Solution();
-            var answer = solution.TwoSum(nums, target);
+        // Arrange
+        var sut = new Solution();
 
-            Assert.Equal(new[] { 0, 1 }, answer);
-        }
+        // Act
+        var result = sut.TwoSum(nums, target);
 
-        [Theory]
-        [InlineData(new int[] { 3, 2, 4 }, 6)]
-        public void Test2(int[] nums, int target)
-        {
-            var solution = new LeetCode.P1.Solution();
-            var answer = solution.TwoSum(nums, target);
-
-            Assert.Equal(new[] { 1, 2 }, answer);
-        }
-
-        [Theory]
-        [InlineData(new int[] { 3, 3 }, 6)]
-        public void Test3(int[] nums, int target)
-        {
-            var solution = new LeetCode.P1.Solution();
-            var answer = solution.TwoSum(nums, target);
-
-            Assert.Equal(new[] { 0, 1 }, answer);
-        }
+        // Assert
+        Assert.Equal(expected, result);
     }
 }
