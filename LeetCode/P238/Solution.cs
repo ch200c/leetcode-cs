@@ -1,27 +1,46 @@
-﻿namespace LeetCode.P238
+﻿using System;
+
+namespace LeetCode.P238;
+
+public class Solution
 {
-    public class Solution
+    public int[] ProductExceptSelf(int[] nums)
     {
-        // Runtime: 264 ms   (53.77 %)
-        // Memory Usage: 35.6 MB
-        public int[] ProductExceptSelf(int[] nums)
+        var product = 1;
+        var zeroCount = 0;
+
+        for (var i = 0; i < nums.Length; i++)
         {
-            var output = new int[nums.Length];
-            output[0] = 1;  // Accumulate left product
-
-            for (var i = 1; i < nums.Length; ++i)
+            if (nums[i] == 0)
             {
-                output[i] = output[i - 1] * nums[i - 1];
-            }
+                zeroCount++;
 
-            var rightProduct = 1;
-            for (var i = nums.Length - 1; i >= 0; --i)
+                if (zeroCount > 1)
+                {
+                    Array.Fill(nums, 0);
+                    return nums;
+                }
+            }
+            else
             {
-                output[i] *= rightProduct;
-                rightProduct *= nums[i];
+                product *= nums[i];
             }
-
-            return output;
         }
+
+        for (var i = 0; i < nums.Length; i++)
+        {
+            if (zeroCount == 0)
+            {
+                nums[i] = product / nums[i];
+            }
+            else
+            {
+                nums[i] = nums[i] != 0
+                    ? 0
+                    : product;
+            }
+        }
+
+        return nums;
     }
 }
