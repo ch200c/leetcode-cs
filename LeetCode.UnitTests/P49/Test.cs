@@ -1,27 +1,37 @@
-﻿using System.Collections.Generic;
-using Xunit;
+﻿using Xunit;
 using System.Linq;
+using LeetCode.P49;
+using System.Collections.Generic;
 
-namespace LeetCode.UnitTests.P49
+namespace LeetCode.UnitTests.P49;
+
+public class Test
 {
-    public class Test
+    [Fact]
+    public void Test1()
     {
-        [Fact]
-        public void Test1()
+        // Arrange
+        var sut = new Solution();
+
+        // Act
+        var result = sut.GroupAnagrams(
+            new string[] { "eat", "tea", "tan", "ate", "nat", "bat" });
+
+        var expectedResult = new HashSet<string>[]
         {
-            var solution = new LeetCode.P49.Solution();
-            var result = solution.GroupAnagrams(
-                new string[] { "eat", "tea", "tan", "ate", "nat", "bat" });
+            new HashSet<string>(){ "ate", "eat", "tea" },
+            new HashSet<string>(){ "nat", "tan" },
+            new HashSet<string>(){ "bat" }
+        };
 
-            var expectedResult = new List<IList<string>>() {
-                new List<string>() { "ate", "eat", "tea" },
-                new List<string>() { "nat", "tan" },
-                new List<string>() { "bat" } };
+        var orderedResult = result
+            .OrderByDescending(group => group.Count)
+            .ToList();
 
-            // TODO
-            Assert.Subset(expectedResult[0].ToHashSet(), result[0].ToHashSet());
-            Assert.Subset(expectedResult[1].ToHashSet(), result[1].ToHashSet());
-            Assert.Subset(expectedResult[2].ToHashSet(), result[2].ToHashSet());
-        }
+        // Assert
+        Assert.Equal(result.Count, expectedResult.Length);
+        Assert.Subset(expectedResult[0], orderedResult[0].ToHashSet());
+        Assert.Subset(expectedResult[1], orderedResult[1].ToHashSet());
+        Assert.Subset(expectedResult[2], orderedResult[2].ToHashSet());
     }
 }
