@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Immutable;
+using System.Linq;
 
 namespace LeetCode.P128;
 
@@ -11,7 +11,7 @@ public class Solution
         var consecutiveCount = 0;
         int? previousNumber = null;
 
-        foreach (var number in nums.ToImmutableSortedSet())
+        foreach (var number in nums.ToHashSet().OrderBy(n => n))
         {
             if (previousNumber != null)
             {
