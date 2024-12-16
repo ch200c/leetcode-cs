@@ -1,5 +1,6 @@
 ﻿using Xunit;
 using LeetCode.P167;
+using System.Linq;
 
 namespace LeetCode.UnitTests.P167;
 
@@ -18,6 +19,6 @@ public class Test
         var result = sut.TwoSum(nums, target);
 
         // Assert
-        Assert.Equal(expected, result);
+        Assert.True(expected.SequenceEqual(result));
     }
 }

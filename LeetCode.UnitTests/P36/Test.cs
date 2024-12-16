@@ -43,8 +43,7 @@ public class Test
             }
         };
 
-    [Theory]
-    [MemberData(nameof(Test1Data))]
+    [Theory, MemberData(nameof(Test1Data))]
     public void Test1(char[][] board, bool expected)
     {
         // Arrange
